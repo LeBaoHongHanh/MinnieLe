@@ -1,0 +1,22 @@
+{
+    "SMTP": {
+      "server": "smtp.example.com",
+      "port": 587
+    },
+    "POP3": {
+      "server": "pop.example.com",
+      "port": 995
+    },
+    "Account": {
+      "username": "your_email@example.com",
+      "password": "your_email_password"
+    },
+    "Autoload": {
+      "interval": 10
+    },
+    "Filter": {
+      "from_address": "important_contact@example.com",
+      "subject_keyword": "work",
+      "content_keyword": "urgent"
+    }
+  }
