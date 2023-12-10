@@ -154,8 +154,7 @@ def sendMail(sender_email):
 
     current_datetime = datetime.now()
     msg = MIMEMultipart()
-    msg['Date'] = f'{current_datetime.strftime(
-        "%a , %Y-%m-%d %H:%M:%S")}\r\n'
+    msg['Date'] = f'{current_datetime.strftime("%a , %Y-%m-%d %H:%M:%S")}\r\n'
     msg['From'] = f'{sender_email}'
     msg['Subject'] = f'{subject}'
     if len(list_to) != 0:
@@ -318,16 +317,13 @@ def auto_fetch_email(interval, email_state):
                     email_content = email_file.read()
                     if 'sender@gmail.com' in email_content:
                         move_to_spam(uid, client_socket)
-                        print(f"Email voi UID {
-                              uid} da duoc di chuyen toi Spam dua tren nguoi gui")
+                        print(f"Email voi UID {uid} da duoc di chuyen toi Spam dua tren nguoi gui")
                     if 'spam' in email_content.lower():
                         move_to_spam(uid, client_socket)
-                        print(f"Email voi UID {
-                              uid} da duoc di chuyen toi Spam dua tren chu de(Subject)")
+                        print(f"Email voi UID {uid} da duoc di chuyen toi Spam dua tren chu de(Subject)")
                     if 'spam_content' in email_content.lower():
                         move_to_spam(uid, client_socket)
-                        print(f"Email voi UID {
-                              uid} da duoc di chuyen toi Spam dua tren noi dung")
+                        print(f"Email voi UID {uid} da duoc di chuyen toi Spam dua tren noi dung")
 
         # Nhận danh sách thư
         client_socket.sendall(b"LIST\r\n")
